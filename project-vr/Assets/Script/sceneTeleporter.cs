@@ -1,13 +1,16 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneTeleporter : MonoBehaviour
+public class sceneTeleporter : MonoBehaviour
 {
+    public string sceneName = "environment";
+
+    // Fungsi ini terpanggil otomatis saat objek ber-collider masuk ke area ini
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player")) // Pastikan Player VR Anda punya tag "Player"
-        {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Level 1 House");
-        }
+        Debug.Log("Ada objek masuk ke trigger: " + other.gameObject.name);
+        // Mengecek apakah yang masuk adalah Player (XR Origin)
+        // Pastikan XR Origin Anda memiliki Tag "Player" atau sesuaikan di sini
+        SceneManager.LoadScene(sceneName);
     }
 }
