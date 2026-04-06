@@ -5,12 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Assers House/MHLab/StickyNotes/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
+    path: Assets/Scenes/Master.unity
+    guid: 9f6d8202082b35f4abfcd980de067767
+  - enabled: 1
     path: Assets/Scenes/Level 1 House.unity
-    guid: 1d6f8f5893ed3b74a9cc98d33455b293
+    guid: 02e7b5d765e94c3489bb188ea8c05807
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 2756f995ae3fde349a5a7ca1b6f6ac3f, type: 2}
