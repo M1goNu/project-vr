@@ -4,6 +4,9 @@ using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Narator & Suara")]
+    public AudioSource audioNarator;
+
     [Header("Pengaturan Timer")]
     public TextMeshPro teksTimer;
     public float totalWaktu = 300f;
@@ -21,6 +24,11 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         if (gameSelesai) return;
+
+        if (audioNarator != null && audioNarator.isPlaying)
+        {
+            return;
+        }
 
         if (totalWaktu > 0)
         {
