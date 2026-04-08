@@ -408,7 +408,7 @@ MonoBehaviour:
   m_InteractionManager: {fileID: 0}
   m_Colliders: []
   m_InteractionLayers:
-    m_Bits: 1073741824
+    m_Bits: 0
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -1992,7 +1992,7 @@ MonoBehaviour:
   m_InteractionManager: {fileID: 1988927206}
   m_Colliders: []
   m_InteractionLayers:
-    m_Bits: 2
+    m_Bits: 512
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -3719,7 +3719,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor
   m_InteractionManager: {fileID: 1988927206}
   m_InteractionLayers:
-    m_Bits: 2
+    m_Bits: 512
   m_Handedness: 0
   m_AttachTransform: {fileID: 1035535589}
   m_KeepSelectedTargetValid: 1
@@ -7795,7 +7795,7 @@ MonoBehaviour:
   m_InteractionManager: {fileID: 1988927206}
   m_Colliders: []
   m_InteractionLayers:
-    m_Bits: 2
+    m_Bits: 512
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -8162,7 +8162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor
   m_InteractionManager: {fileID: 1988927206}
   m_InteractionLayers:
-    m_Bits: 2
+    m_Bits: 512
   m_Handedness: 0
   m_AttachTransform: {fileID: 1775393656}
   m_KeepSelectedTargetValid: 1
@@ -11448,7 +11448,7 @@ MonoBehaviour:
   m_InteractionManager: {fileID: 1988927206}
   m_Colliders: []
   m_InteractionLayers:
-    m_Bits: 2
+    m_Bits: 512
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
