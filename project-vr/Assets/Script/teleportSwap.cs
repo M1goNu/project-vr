@@ -1,24 +1,31 @@
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
 
-public class teleportSwap : MonoBehaviour
+public class TeleportSwap : MonoBehaviour
 {
-    public GameObject playerVR; // Isi dengan XR Origin (VR)
-    public GameObject dummyObject; // Isi dengan HumanDummy_F White
+    public GameObject playerVR;    // Isi dengan XR Origin (VR)
+    public GameObject dummyObject;
 
-    // Fungsi ini akan dipanggil saat teleportasi terjadi
     public void SwapPosition()
     {
-        // 1. Simpan posisi player saat ini (sebelum pindah)
-        Vector3 playerLastPos = playerVR.transform.position;
+        if (playerVR == null || dummyObject == null) return;
 
-        // 2. Karena script ini menempel di Dummy, posisinya adalah target
-        Vector3 dummyPos = dummyObject.transform.position;
+        // Ambil komponen Character Controller jika ada
+        CharacterController cc = playerVR.GetComponent<CharacterController>();
 
-        // 3. Pindahkan Dummy ke posisi terakhir player
-        dummyObject.transform.position = playerLastPos;
+        // 1. Simpan posisi dummy & player saat ini
+        Vector3 playerPosBefore = playerVR.transform.position;
+        Vector3 dummyPosBefore = dummyObject.transform.position;
 
-        // Catatan: Anda tidak perlu memindahkan Player secara manual lewat script 
-        // karena komponen Teleportation Area yang akan melakukannya.
+        // 2. Matikan CC agar posisi bisa dipindahkan paksa
+        if (cc != null) cc.enabled = false;
+
+        // 3. TUKAR POSISI
+        playerVR.transform.position = dummyPosBefore;
+        dummyObject.transform.position = playerPosBefore;
+
+        // 4. Hidupkan kembali CC
+        if (cc != null) cc.enabled = true;
+
+        Debug.Log("Posisi Berhasil Ditukar!");
     }
 }
