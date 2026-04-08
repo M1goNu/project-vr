@@ -14,11 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.InteractionLayerSettings
   m_LayerNames:
   - Default
+<<<<<<< HEAD
   - bottle
   - 
   - 
   - 
   - 
+=======
+  - Topi
+  - Mainan dice
+  - Console
+  - Robot
+  - Buku
+>>>>>>> yehuda
   - 
   - 
   - 
