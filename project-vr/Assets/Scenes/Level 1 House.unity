@@ -5352,7 +5352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   audioNarator: {fileID: 1297301023}
   teksTimer: {fileID: 1269813409}
-  totalWaktu: 300
+  totalWaktu: 600
   socketBuku:
   - {fileID: 1422470678}
   - {fileID: 2059826961}
