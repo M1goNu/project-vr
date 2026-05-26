@@ -150,7 +150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2835139170107204416, guid: e430022eaa2c59340af3119c722ac3b2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.099
+      value: -0.12699983
       objectReference: {fileID: 0}
     - target: {fileID: 2835139170107204416, guid: e430022eaa2c59340af3119c722ac3b2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2653,7 +2653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 1540223313}
   m_Colliders: []
   m_InteractionLayers:
     m_Bits: 2
@@ -6393,7 +6393,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2442306273320644280, guid: 3df3e1220f2164f448701a6de8084f92, type: 3}
       propertyPath: m_InteractionLayers.m_Bits
-      value: 1073741825
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 2442306273320644280, guid: 3df3e1220f2164f448701a6de8084f92, type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.size
@@ -6874,7 +6874,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2304931149449798800, guid: 0f76269ae1c485146a382146b683886b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.944
+      value: -1.17
       objectReference: {fileID: 0}
     - target: {fileID: 2304931149449798800, guid: 0f76269ae1c485146a382146b683886b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8243,7 +8243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 1540223313}
   m_Colliders: []
   m_InteractionLayers:
     m_Bits: 2
@@ -20488,7 +20488,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4808866746549998793, guid: b200f6587d118224eba8467281481800, type: 3}
       propertyPath: m_InteractionLayers.m_Bits
-      value: 1073741825
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4808866746549998793, guid: b200f6587d118224eba8467281481800, type: 3}
       propertyPath: m_SortNearTargetsAfterTargetFilter
@@ -21617,7 +21617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 1540223313}
   m_Colliders: []
   m_InteractionLayers:
     m_Bits: 2
