@@ -75,7 +75,7 @@ public class XRLever : UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseIn
         direction = transform.InverseTransformDirection(direction);
 
         direction.x = 0;
-        direction.y = Mathf.Clamp(direction.y, 0, 1);
+        direction.y = Mathf.Clamp(direction.y, -1f, 1);
 
         return direction;
     }
