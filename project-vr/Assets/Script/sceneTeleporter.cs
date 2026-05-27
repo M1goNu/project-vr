@@ -81,7 +81,7 @@ public class SceneTeleporter : MonoBehaviour
         }
         else if (sceneName == "Level 2")
         {
-            dynamicObject.transform.position = new Vector3(317.9f, 106.87f, 385.4f); // Ganti koordinat sesuai kebutuhan
+            dynamicObject.transform.position = new Vector3(317.9f, 104f, 385.4f); // Ganti koordinat sesuai kebutuhan
             dynamicObject.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
         }
     }
