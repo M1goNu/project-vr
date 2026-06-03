@@ -3,37 +3,25 @@ using UnityEngine.SceneManagement;
 
 public class SceneTeleporter : MonoBehaviour
 {
-    [Header("Referensi")]
-    public GameObject dynamicObject;
+    [Header("Referensi Objek Lokal")]
+    [SerializeField] private GameObject dynamicObject;
 
-    private static SceneTeleporter instance;
-
-    // Variabel baru untuk mencatat nama scene sebelum perpindahan terjadi
-    private string previousSceneName = "";
+    // Variabel statis untuk mencatat scene terakhir yang benar-benar aktif sebelum pindah
+    private static string lastActiveScene = "";
+    private bool startedInThisScene = false;
 
     void Awake()
     {
-        if (instance != null && instance != this)
+        // Jika lastActiveScene masih kosong, berarti game baru pertama kali dijalankan/di-play di scene ini
+        if (string.IsNullOrEmpty(lastActiveScene))
         {
-            Destroy(gameObject);
-            return;
+            startedInThisScene = true;
+            lastActiveScene = SceneManager.GetActiveScene().name;
         }
-
-        instance = this;
-        DontDestroyOnLoad(gameObject); // Menjaga script ini tetap hidup
-
-        if (dynamicObject != null)
-        {
-            DontDestroyOnLoad(dynamicObject);
-        }
-
-        // Catat scene pertama kali game dinyalakan/skrip ini aktif
-        previousSceneName = SceneManager.GetActiveScene().name;
     }
 
     private void OnEnable()
     {
-        // Mendaftarkan fungsi pindah posisi ke sistem Scene Manager
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
@@ -42,49 +30,46 @@ public class SceneTeleporter : MonoBehaviour
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
-    // Fungsi ini dipanggil OTOMATIS tepat setelah scene baru muncul
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // Mengecek apakah scene yang dimuat adalah salah satu dari 3 level ini
-        if (scene.name == "Level 1 House" || scene.name == "Master-test" || scene.name == "Level 2")
-        {
-            SetPositions(scene.name);
-        }
+        SetPositions(scene.name);
 
-        // SETELAH posisi diatur, perbarui previousSceneName dengan scene yang saat ini aktif
-        previousSceneName = scene.name;
+        // Perbarui scene terakhir setelah posisi selesai diatur
+        lastActiveScene = scene.name;
     }
 
-    void SetPositions(string sceneName)
+    private void SetPositions(string sceneName)
     {
         if (dynamicObject == null) return;
 
-        // Atur posisi berdasarkan nama scene yang sedang aktif
         if (sceneName == "Level 1 House")
         {
-            dynamicObject.transform.position = new Vector3(398.8f, 104.79f, 313.8f);
+            dynamicObject.transform.position = new Vector3(393.12f, 100.91f, 309.74f);
             dynamicObject.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
         }
         else if (sceneName == "Master-test")
         {
-            // KONDISI BARU: Hanya ubah posisi JIKA scene sebelumnya BUKAN "Master-test"
-            if (previousSceneName != "Master-test")
+            // KONDISI: Jika dari awal (Play di Editor) sudah di Master-test, JANGAN ubah posisi
+            if (startedInThisScene && lastActiveScene == "Master-test")
             {
-                dynamicObject.transform.position = new Vector3(0f, 0f, 0f); // Ganti koordinat sesuai kebutuhan
-                dynamicObject.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-                Debug.Log("Player pindah dari scene lain ke Tutorial. Posisi diatur ulang.");
+                Debug.Log("Player sudah berada di Master-test sejak awal permainan. Posisi dipertahankan.");
+                startedInThisScene = false; // Reset status
+                return;
             }
-            else
-            {
-                Debug.Log("Player sudah berada di Tutorial sejak awal. Posisi TIDAK diubah.");
-            }
+
+            // Koordinat baru jika datang dari scene lain (misal dari Level 1 ke Tutorial)
+            dynamicObject.transform.position = new Vector3(0f, 0f, 0f); // Ganti sesuai kebutuhan
+            dynamicObject.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+            Debug.Log("Player pindah dari scene lain ke Master-test. Posisi diatur ke koordinat baru.");
         }
         else if (sceneName == "Level 2")
         {
-            dynamicObject.transform.position = new Vector3(317.9f, 104f, 385.4f); // Ganti koordinat sesuai kebutuhan
+            dynamicObject.transform.position = new Vector3(322.34f, 101.58f, 378.79f); // Ganti sesuai kebutuhan
             dynamicObject.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
         }
     }
+
+    // --- FUNGSI TOMBOL UI / TRIGGER PERPINDAHAN ---
 
     public void GoToLevel1()
     {
