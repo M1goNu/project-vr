@@ -722,8 +722,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 97699315}
-  - component: {fileID: 97699317}
   - component: {fileID: 97699316}
+  - component: {fileID: 97699317}
   m_Layer: 0
   m_Name: right
   m_TagString: Untagged
@@ -777,10 +777,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 97699314}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60523e0647cc6ab43acc73cb266a32a7, type: 3}
+  m_Script: {fileID: 11500000, guid: d96b5a81f5b62344cae6eff40a8a79a2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor
-  m_InteractionManager: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::PersistentGhostSocket
+  m_InteractionManager: {fileID: 2064740641}
   m_InteractionLayers:
     m_Bits: 32
   m_Handedness: 0
@@ -816,6 +816,11 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
+  m_ShowGhostWhenEmpty: 1
+  m_GhostMeshes:
+  - {fileID: 8672969826604723747, guid: 7a1dd57bd8b6ca44cbf5f922801b2975, type: 3}
+  - {fileID: 3530721923590968681, guid: 7a1dd57bd8b6ca44cbf5f922801b2975, type: 3}
+  m_GhostMaterial: {fileID: 0}
 --- !u!1 &101378767
 GameObject:
   m_ObjectHideFlags: 0
@@ -11099,8 +11104,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1286556338}
-  - component: {fileID: 1286556339}
   - component: {fileID: 1286556340}
+  - component: {fileID: 1286556341}
   m_Layer: 0
   m_Name: left
   m_TagString: Untagged
@@ -11124,7 +11129,28 @@ Transform:
   - {fileID: 118452438}
   m_Father: {fileID: 1589994721}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1286556339
+--- !u!135 &1286556340
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286556337}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1286556341
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11133,12 +11159,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1286556337}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60523e0647cc6ab43acc73cb266a32a7, type: 3}
+  m_Script: {fileID: 11500000, guid: d96b5a81f5b62344cae6eff40a8a79a2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor
-  m_InteractionManager: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::PersistentGhostSocket
+  m_InteractionManager: {fileID: 2064740641}
   m_InteractionLayers:
-    m_Bits: 32
+    m_Bits: 4294967295
   m_Handedness: 0
   m_AttachTransform: {fileID: 118452438}
   m_KeepSelectedTargetValid: 1
@@ -11172,27 +11198,11 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!135 &1286556340
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1286556337}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_ShowGhostWhenEmpty: 1
+  m_GhostMeshes:
+  - {fileID: 8672969826604723747, guid: 7a1dd57bd8b6ca44cbf5f922801b2975, type: 3}
+  - {fileID: 3530721923590968681, guid: 7a1dd57bd8b6ca44cbf5f922801b2975, type: 3}
+  m_GhostMaterial: {fileID: 0}
 --- !u!1 &1286858029
 GameObject:
   m_ObjectHideFlags: 0
