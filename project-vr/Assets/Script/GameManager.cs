@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour
         if (ApakahSemuaTerisi(socketBuku) && ApakahSemuaTerisi(socketMainan) && ApakahSemuaTerisi(socketTopi))
         {
             gameSelesai = true;
-            teksTimer.text = "ESCAPE SUCCESS!";
+            teksTimer.text = "Selamat Anda telah membereskan kamar!";
             teksTimer.color = Color.green;
 
             if (tombolQuit != null) tombolQuit.SetActive(true);
