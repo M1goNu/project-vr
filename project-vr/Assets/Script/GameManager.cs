@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     [Header("UI Kemenangan")]
     public GameObject tombolQuit;
     public GameObject tombolPlayAgain;
+    public GameObject tombolNextLevel;
 
     void Update()
     {
@@ -45,6 +46,7 @@ public class GameManager : MonoBehaviour
 
             if (tombolQuit != null) tombolQuit.SetActive(true);
             if (tombolPlayAgain != null) tombolPlayAgain.SetActive(true);
+            if (tombolNextLevel != null) tombolNextLevel.SetActive(false);
         }
     }
 
@@ -65,6 +67,7 @@ public class GameManager : MonoBehaviour
 
             if (tombolQuit != null) tombolQuit.SetActive(true);
             if (tombolPlayAgain != null) tombolPlayAgain.SetActive(true);
+            if (tombolNextLevel != null) tombolNextLevel.SetActive(true);
         }
     }
 
