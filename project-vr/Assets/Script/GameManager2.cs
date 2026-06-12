@@ -20,6 +20,7 @@ public class GameManager2 : MonoBehaviour
     [Header("UI")]
     public GameObject canvasInfo;
     public GameObject canvasMenang;
+    public GameObject winScreen;
 
     private bool gameSelesai = false;
 
@@ -65,6 +66,7 @@ public class GameManager2 : MonoBehaviour
             gameSelesai = true;
             if (canvasInfo != null) canvasInfo.SetActive(false);
             if (canvasMenang != null) canvasMenang.SetActive(true);
+            if (winScreen != null) winScreen.SetActive(true);
         }
     }
 
