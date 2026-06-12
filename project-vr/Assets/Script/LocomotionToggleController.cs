@@ -40,13 +40,13 @@ public class LocomotionToggleController : MonoBehaviour
         if (snapTurnProvider != null)
         {
             snapTurnProvider.enabled = isEnabled;
-            Debug.Log($"SnapTurn diset ke: {isEnabled}");
+            Debug.Log($"[{saveKey}] SnapTurn diset ke: {isEnabled}");
         }
 
         if (continuousTurnProvider != null)
         {
             continuousTurnProvider.enabled = isEnabled;
-            Debug.Log($"ContinuousTurn diset ke: {isEnabled}");
+            Debug.Log($"[{saveKey}] ContinuousTurn diset ke: {isEnabled}");
         }
     }
 
