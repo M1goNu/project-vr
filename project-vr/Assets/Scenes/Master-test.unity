@@ -601,6 +601,56 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e604626216d36b4bb52967cf3b88713, type: 3}
+--- !u!1 &31244700
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 31244701}
+  - component: {fileID: 31244702}
+  m_Layer: 0
+  m_Name: SnapTurn_Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &31244701
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31244700}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1080138086}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &31244702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31244700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b65db214f94a1b4a978fb840ecd6cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SnapTurnUI
+  snapToggle: {fileID: 1114223054}
+  snapProvider: {fileID: 208017853}
 --- !u!1 &31361374
 GameObject:
   m_ObjectHideFlags: 0
@@ -4808,7 +4858,6 @@ GameObject:
   m_Component:
   - component: {fileID: 379070488}
   - component: {fileID: 379070489}
-  - component: {fileID: 379070490}
   m_Layer: 0
   m_Name: ContinousTurn
   m_TagString: Untagged
@@ -4897,22 +4946,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 1
---- !u!114 &379070490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 379070487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3220a5068d1fdb54db45d800c1568088, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocomotionToggleController
-  saveKey: 'ContinuousTurnSavedState '
-  defaultValue: 1
-  snapTurnProvider: {fileID: 0}
-  continuousTurnProvider: {fileID: 1781589292}
 --- !u!1 &380821355
 GameObject:
   m_ObjectHideFlags: 0
@@ -6059,6 +6092,56 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 449186, guid: 7e00b420d123b944b9365009b3dfd075, type: 3}
   m_PrefabInstance: {fileID: 1853705134}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &429149252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 429149253}
+  - component: {fileID: 429149254}
+  m_Layer: 0
+  m_Name: ContinuousTurn_Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &429149253
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429149252}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1080138086}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &429149254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429149252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7416875bd6a7e734d9b07f935cb93434, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ContinuousTurnUI
+  continuousToggle: {fileID: 379070489}
+  continuousProvider: {fileID: 1781589292}
 --- !u!1 &430629544
 GameObject:
   m_ObjectHideFlags: 0
@@ -12375,6 +12458,8 @@ RectTransform:
   - {fileID: 28066905}
   - {fileID: 1788478262}
   - {fileID: 270516936}
+  - {fileID: 31244701}
+  - {fileID: 429149253}
   m_Father: {fileID: 1651668272}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -12975,7 +13060,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1114223053}
   - component: {fileID: 1114223054}
-  - component: {fileID: 1114223055}
   m_Layer: 0
   m_Name: SnapTurn
   m_TagString: Untagged
@@ -13064,22 +13148,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 1
---- !u!114 &1114223055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1114223052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3220a5068d1fdb54db45d800c1568088, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocomotionToggleController
-  saveKey: SnapTurnSavedState
-  defaultValue: 1
-  snapTurnProvider: {fileID: 208017853}
-  continuousTurnProvider: {fileID: 0}
 --- !u!4 &1125874299 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4531224598399342320, guid: 9e604626216d36b4bb52967cf3b88713, type: 3}
@@ -20319,7 +20387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75b29b6c6428c984a8a73ffc2d58063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Locomotion.Turning.ContinuousTurnProvider
-  m_Mediator: {fileID: 0}
+  m_Mediator: {fileID: 940957434}
   m_TransformationPriority: 0
   m_TurnSpeed: 60
   m_EnableTurnLeftRight: 1

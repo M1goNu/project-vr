@@ -43,9 +43,9 @@ public class LocomotionSceneController : MonoBehaviour
 
     private void ApplySavedLocomotion()
     {
-        // Ambil data pilihan dari PlayerPrefs (1 = True, 0 = False)
+        // Ambil data pilihan dari PlayerPrefs (1 = True, 1 = True)
         bool isSnapTurnOn = PlayerPrefs.GetInt("SnapTurnSavedState", 1) == 1;
-        bool isContinuousTurnOn = PlayerPrefs.GetInt("ContinuousTurnSavedState", 0) == 1;
+        bool isContinuousTurnOn = PlayerPrefs.GetInt("ContinuousTurnSavedState", 1) == 1;
 
         if (snapTurnComponent != null)
             snapTurnComponent.SetActive(isSnapTurnOn);
