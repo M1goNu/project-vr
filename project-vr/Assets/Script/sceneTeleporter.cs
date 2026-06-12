@@ -49,18 +49,9 @@ public class SceneTeleporter : MonoBehaviour
         }
         else if (sceneName == "Master-test")
         {
-            // KONDISI: Jika dari awal (Play di Editor) sudah di Master-test, JANGAN ubah posisi
-            if (startedInThisScene && lastActiveScene == "Master-test")
-            {
-                Debug.Log("Player sudah berada di Master-test sejak awal permainan. Posisi dipertahankan.");
-                startedInThisScene = false; // Reset status
-                return;
-            }
-
             // Koordinat baru jika datang dari scene lain (misal dari Level 1 ke Tutorial)
-            dynamicObject.transform.position = new Vector3(0f, 0f, 0f); // Ganti sesuai kebutuhan
+            dynamicObject.transform.position = new Vector3(4.1f, 3.36f, 0.969f); // Ganti sesuai kebutuhan
             dynamicObject.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-            Debug.Log("Player pindah dari scene lain ke Master-test. Posisi diatur ke koordinat baru.");
         }
         else if (sceneName == "Level 2")
         {
